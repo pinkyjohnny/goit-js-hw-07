@@ -33,7 +33,7 @@ function renderGallery(images) {
 renderGallery(galleryItems)
 
 
-document.querySelectorAll('.gallery__item').forEach((item, idx) =>
+document.querySelectorAll('.gallery').forEach((item, idx) =>
   item.onclick = (event) => {
     event.preventDefault();
     basicLightbox.create(`

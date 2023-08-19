@@ -34,8 +34,3 @@ let gallery = new SimpleLightbox('.gallery a', {
     captionDelay: 250
 });
 
-gallery.on('show.simplelightbox', function (event) {
-    event.preventDefault();
-});
-
-console.log(galleryItems);
