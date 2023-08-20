@@ -33,12 +33,11 @@ function renderGallery(images) {
 renderGallery(galleryItems)
 
 
-document.querySelectorAll('.gallery').forEach((item, idx) =>
-  item.onclick = (event) => {
-    event.preventDefault();
-    basicLightbox.create(`
-		<img width="1400" height="900" src="${galleryItems[idx].original}">
+refs.galleryList.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  basicLightbox.create(`
+		<img width="1400" height="900" src="${evt.target.dataset.source}">
 	`).show()
-  })
+})
 
 console.log(galleryItems);
